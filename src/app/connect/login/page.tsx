@@ -56,6 +56,11 @@ export default function ConnectLoginPage() {
                     throw new Error('No connect URL returned from API');
                 }
 
+                // replace the signature param in data 
+
+            
+                console.log(`Connect Lite URL: ${data.link}`);
+                
                 // Initialize the Connect SDK with the generated URL
                 initializeConnectSdk(data.link);
             } catch (err) {
