@@ -23,10 +23,11 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Generate Connect URL
+    // Generate Connect URL with institutionId if provided
     const result = await finicityClient.generateConnectUrl(
       body.customerId,
       body.redirectUri,
+      body.institutionId, // Pass the institutionId to pre-select the institution
       body.webhook,
       body.webhookContentType
     );

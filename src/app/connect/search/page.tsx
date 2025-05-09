@@ -56,7 +56,8 @@ export default function BankSearchPage() {
 
   const handleInstitutionClick = (institutionId: number) => {
     console.log('Institution clicked:', institutionId);
-    // You can add further logic here, e.g., navigating to another page or opening a modal
+    // Navigate to the login page with the selected institution ID
+    window.location.href = `/connect/login?institutionId=${institutionId}`;
   };
 
   return (
